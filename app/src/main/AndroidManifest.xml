@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MrTrot2">
         <activity
+            android:name=".VoteWebView"
+            android:exported="true" />
+        <activity
+            android:name=".StageWebView"
+            android:exported="true" />
+        <activity
+            android:name=".MySetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EmailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

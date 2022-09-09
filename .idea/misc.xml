@@ -4,6 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Kusee/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_main.xml" value="0.3515625" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_email.xml" value="0.24564102564102563" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_my_set.xml" value="0.6" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_splash.xml" value="0.24564102564102563" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_stage_web_view.xml" value="0.24564102564102563" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_view.xml" value="0.4" />
+        <entry key="..\:/Users/rndud/AndroidStudioProjects/MrTrot2/app/src/main/res/layout/activity_vote_web_view.xml" value="0.24564102564102563" />
       </map>
     </option>
   </component>
