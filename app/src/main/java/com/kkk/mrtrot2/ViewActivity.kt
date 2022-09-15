@@ -75,7 +75,7 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
 
-        AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
+//        AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
         cmDataList.clear()
         val recyclerView = findViewById<RecyclerView>(R.id.cm_rv)
 
@@ -116,7 +116,7 @@ class ViewActivity : AppCompatActivity() {
 
         MobileAds.initialize(this) {}
 
-        rewardedAd = RewardedAd(this, "ca-app-pub-8246055051187544/3073413640")
+//        rewardedAd = RewardedAd(this, "ca-app-pub-8246055051187544/3073413640")
 
         val adLoadCallback = object : RewardedAdLoadCallback() {
             override fun onRewardedAdLoaded() {
