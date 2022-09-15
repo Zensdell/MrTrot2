@@ -9,7 +9,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.view.View.*
@@ -40,11 +39,10 @@ import kotlin.collections.ArrayList
 import android.widget.Toast
 
 import com.facebook.ads.AdSettings
+import com.google.android.ads.mediationtestsuite.MediationTestSuite
 
 import com.google.android.gms.ads.*
-import com.google.android.gms.ads.R
 import kotlinx.android.synthetic.main.activity_view.*
-import java.util.concurrent.TimeUnit
 import kotlin.concurrent.thread
 
 
@@ -73,12 +71,10 @@ class ViewActivity : AppCompatActivity() {
     private lateinit var cmEdit:EditText
     private lateinit var cmEditText: String
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
 
-        timeViewLayout.visibility = GONE
         AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
         cmDataList.clear()
         val recyclerView = findViewById<RecyclerView>(R.id.cm_rv)
@@ -101,7 +97,7 @@ class ViewActivity : AppCompatActivity() {
             thread(start = true){
                 Thread.sleep(1500)
                 runOnUiThread {
-                    cmProgressBar.visibility = View.GONE
+                    cmProgressBar.visibility = GONE
                 }
             }
 
@@ -171,7 +167,7 @@ class ViewActivity : AppCompatActivity() {
 
             if (view != null) {
                 val inputMethodManager =
-                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                 inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
             }
         }
@@ -440,28 +436,6 @@ class ViewActivity : AppCompatActivity() {
                     Toast.makeText(this@ViewActivity, "댓글응원권 2개 획득!", Toast.LENGTH_LONG).show()
 
                     // 광고 버튼에 해놨으니까 안나온다.!!!!!!!!@@@@@@@!@!@!@!@
-
-                    val commentCount = pref.getInt("CommentCount",0)
-                    if (commentCount==0) {
-                        timeViewLayout.visibility = VISIBLE
-
-                        object : CountDownTimer(30000 * 4, 1000) {
-
-                            override fun onTick(p0: Long) {
-                                val remainSeconds = p0 / 1000
-                                // countDownInterval 마다 호출 (여기선 1000ms)
-                                timeMinuteTxt.text = "%02d :".format(remainSeconds / 60)
-                                timeSecondTxt.text = (TimeUnit.SECONDS.toSeconds(remainSeconds) - TimeUnit.SECONDS.toMinutes(remainSeconds) * 60).toString()
-//                                        (p0 / 1000).toString()
-                            }
-
-                            override fun onFinish() {
-                                timeViewLayout.visibility = GONE
-                                // 타이머가 종료되면 호출
-                            }
-                        }.start()
-                    }
-
                 }
 
                 override fun onRewardedAdFailedToShow(adError: AdError) {

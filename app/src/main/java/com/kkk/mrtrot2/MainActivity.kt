@@ -24,8 +24,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.google.android.ads.mediationtestsuite.MediationTestSuite
-import com.kakao.adfit.ads.AdListener
-import com.kakao.adfit.ads.ba.BannerAdView
+//import com.kakao.adfit.ads.AdListener
+//import com.kakao.adfit.ads.ba.BannerAdView
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -51,73 +51,73 @@ class MainActivity : FragmentActivity() {
         //메인액티비티 뜨자마자 데이터 가져오기
         dataFromFirestore()
         //  viewMySetPage()
-        kakaoAdfit()
+//        kakaoAdfit()
 
     }
 
-    private fun kakaoAdfit() {
-        val adView = findViewById<BannerAdView>(R.id.adView)
-        adView.setClientId("DAN-CRFQ2XII8V9vW05U") // 할당 받은 광고단위 ID 설정
+//    private fun kakaoAdfit() {
+//        val adView = findViewById<BannerAdView>(R.id.adView)
+//        adView.setClientId("DAN-CRFQ2XII8V9vW05U") // 할당 받은 광고단위 ID 설정
+//
+//        adView.setAdListener(object : AdListener {
+//            // 광고 수신 리스너 설정
+//            override fun onAdLoaded() {
+//                Log.d("애드핏로드성공?","로드됨")
+//            }
+//
+//            override fun onAdFailed(errorCode: Int) {
+//                Log.d("애드핏로드실패?" ,"${errorCode}")
+//            }
+//
+//            override fun onAdClicked() {
+//                Log.d("애드핏클릭됨?","클릭됨")
+//            }
+//        })
+//
+//        lifecycle.addObserver(object : LifecycleObserver {
+//
+//            @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+//            fun onResume() {
+//                adView.resume()
+//                Log.d("resume","나오나?")
+//            }
+//
+//            @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+//            fun onPause() {
+//                adView.pause()
+//                Log.d("pause","나오나?")
+//            }
+//
+//            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+//            fun onDestroy() {
+//                adView.destroy()
+//                Log.d("destroy","나오나?")
+//            }
+//        })
+//        adView.loadAd()
+//
+//    }
 
-        adView.setAdListener(object : AdListener {
-            // 광고 수신 리스너 설정
-            override fun onAdLoaded() {
-                Log.d("애드핏로드성공?","로드됨")
-            }
-
-            override fun onAdFailed(errorCode: Int) {
-                Log.d("애드핏로드실패?" ,"${errorCode}")
-            }
-
-            override fun onAdClicked() {
-                Log.d("애드핏클릭됨?","클릭됨")
-            }
-        })
-
-        lifecycle.addObserver(object : LifecycleObserver {
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-            fun onResume() {
-                adView.resume()
-                Log.d("resume","나오나?")
-            }
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-            fun onPause() {
-                adView.pause()
-                Log.d("pause","나오나?")
-            }
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-            fun onDestroy() {
-                adView.destroy()
-                Log.d("destroy","나오나?")
-            }
-        })
-        adView.loadAd()
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        checkRemoteConfig()
-        // lifecycle 사용이 불가능한 경우
-        adView?.resume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-
-        // lifecycle 사용이 불가능한 경우
-        adView?.pause()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        // lifecycle 사용이 불가능한 경우
-        adView?.destroy()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        checkRemoteConfig()
+//        // lifecycle 사용이 불가능한 경우
+//        adView?.resume()
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//
+//        // lifecycle 사용이 불가능한 경우
+//        adView?.pause()
+//    }
+//
+//    override fun onDestroy() {
+//        super.onDestroy()
+//
+//        // lifecycle 사용이 불가능한 경우
+//        adView?.destroy()
+//    }
 
 
 
@@ -141,7 +141,6 @@ class MainActivity : FragmentActivity() {
                         } else {
                             pInfo.versionCode.toLong()
                         }
-                        Log.d(TAG,"userVersion:$userVersion")
                         if(firebaseUpdateVersion > userVersion) {
                             if(!isShowingAlertDialog) {
                                 isShowingAlertDialog = true
@@ -268,4 +267,145 @@ class MainActivity : FragmentActivity() {
                 Toast.makeText(this, "인터넷 연결상태를 확인해주세요.", Toast.LENGTH_SHORT).show()
             }
     }
+//    private fun viewMySetPage(){
+//        val mySetBtn = findViewById<TextView>(R.id.humanImage)
+//        mySetBtn.setOnClickListener {
+//            val intent = Intent(this,MySetActivity::class.java)
+//            startActivity(intent)
+//        }
+//    }
 
+}
+
+
+//    lateinit var mAdView : AdView
+//
+//    private val items = mutableListOf<ProfileData>()
+//
+//    val datas = mutableListOf<ProfileData>()
+//    val datas2 = mutableListOf<ProfileData>()
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_main)
+////        initRecycler()
+////        loadBannerAd()
+//        dataFromFirestore()
+//        viewMySetPage()
+//
+////        val allSinger = findViewById<Button>(R.id.allSingers)
+////        allSinger.setOnClickListener {
+////            val allIntent = Intent(this,AllSingersActivity::class.java)
+////            startActivity(intent)
+////        }
+//
+//    }
+//
+//    private fun dataFromFirestore() {
+//        val db = Firebase.firestore
+//        db.collection("Singers")
+//            .get()
+//            .addOnSuccessListener { result ->
+//
+//                for (document in result) {
+//                    datas.add(
+//                        ProfileData(
+//                            img = document.data["imageUrl"] as String,
+//                            name = document.data["name"] as String,
+//                            stageUrl = document.data["stageUrl"] as String,
+//                            singerId = document.data["id"] as String,
+//                            infoUrl = document.data["infoUrl"] as String,
+//                            commentCount = document.data["commentCount"] as Long,
+//                        )
+//                    )
+//                    Log.d(TAG, "${document.id} => ${document.data}")
+//                }
+//
+//                for (document in result) {
+//                    datas2.add(
+//                        ProfileData(
+//                            img = document.data["imageUrl"] as String,
+//                            name = document.data["name"] as String,
+//                            stageUrl = document.data["stageUrl"] as String,
+//                            singerId = document.data["id"] as String,
+//                            infoUrl = document.data["infoUrl"] as String,
+//                            commentCount = document.data["commentCount"] as Long,
+//                        )
+//                    )
+//
+//                    Log.d(TAG, "${document.id} => ${document.data}")
+//                }
+//
+//                datas2.sortByDescending { it.commentCount }
+//                datas.add(0,datas2[2])
+//                datas.add(0,datas2[1])
+//                datas.add(0,datas2[0])
+//
+//                val recyclerView = findViewById<RecyclerView>(R.id.re_rv)
+//                val rvAdapter = RVAdapter(this)
+//                rvAdapter.datas = datas
+//
+//                recyclerView.adapter = rvAdapter
+//
+//                rvAdapter.itemClick=object : RVAdapter.ItemClick{
+//                    override fun onClick(view: View, position: Int) {
+//
+//                        val intent = Intent(baseContext, ViewActivity::class.java)
+//                        intent.putExtra("img",datas[position].img)
+//                        intent.putExtra("stageUrl", datas[position].stageUrl)
+//                        intent.putExtra("singerId", datas[position].singerId)
+//                        intent.putExtra("infoUrl",datas[position].infoUrl)
+//                        intent.putExtra("commentCount",datas[position].commentCount)
+//
+//                        startActivity(intent)
+//                    }
+//                }
+//                recyclerView.layoutManager = GridLayoutManager(this,3)
+//
+//
+//            }
+//            .addOnFailureListener { exception ->
+//                Toast.makeText(this, "인터넷 연결상태를 확인해주세요.", Toast.LENGTH_SHORT).show()
+//            }
+//    }
+//
+//    private fun viewMySetPage(){
+//        val mySetBtn = findViewById<ImageView>(R.id.humanImage)
+//        mySetBtn.setOnClickListener {
+//            val intent = Intent(this,MySetActivity::class.java)
+//            startActivity(intent)
+//        }
+//    }
+//    private fun loadBannerAd() {
+//        MobileAds.initialize(this) {}
+//
+////        mAdView = findViewById(R.id.adView)
+//        val adRequest = AdRequest.Builder().build()
+//        mAdView.loadAd(adRequest)
+//
+//        mAdView.adListener = object: AdListener() {
+//            override fun onAdLoaded() {
+//                // Code to be executed when an ad finishes loading.
+//                Toast.makeText(this@MainActivity, "광고 나옴", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            override fun onAdFailedToLoad(adError : LoadAdError) {
+//                // Code to be executed when an ad request fails.
+//            }
+//
+//            override fun onAdOpened() {
+//                // Code to be executed when an ad opens an overlay that
+//                // covers the screen.
+//            }
+//
+//            override fun onAdClicked() {
+//                // Code to be executed when the user clicks on an ad.
+//            }
+//
+//            override fun onAdClosed() {
+//                // Code to be executed when the user is about to return
+//                // to the app after tapping on an ad.
+//            }
+//        }
+//
+//    }
+//}
