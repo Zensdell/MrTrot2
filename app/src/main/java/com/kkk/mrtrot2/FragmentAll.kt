@@ -26,12 +26,12 @@ class FragmentAll() : Fragment() {
 
         // 여기가 메인액티비티에서 온크리에이트랑 비슷한 역할을하는함수야
         // 프래그먼트라 이름이 온크리에이트뷰임
-        MobileAds.initialize(context) {}
-        AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
-        mInterstitialAd = InterstitialAd(context)
-        mInterstitialAd!!.adUnitId = "ca-app-pub-8246055051187544/5730840886"
-        mInterstitialAd!!.loadAd(AdRequest.Builder().build())
-        Log.d("애드몹전면광고","로드하나?")
+//        MobileAds.initialize(context) {}
+//        AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
+//        mInterstitialAd = InterstitialAd(context)
+//        mInterstitialAd!!.adUnitId = "ca-app-pub-8246055051187544/5730840886"
+//        mInterstitialAd!!.loadAd(AdRequest.Builder().build())
+//        Log.d("애드몹전면광고","로드하나?")
 
 
         val view: View = inflater.inflate(R.layout.fragment_all, container, false) as ViewGroup

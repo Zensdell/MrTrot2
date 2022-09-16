@@ -12,14 +12,24 @@
         android:roundIcon="@mipmap/ic_mrtrot2icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MrTrot2">
+
         <activity
             android:name=".InfoWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" />
+
+        <!--실제 사용시 광고 아이디 바꿀것 !!!!-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
         <activity
             android:name=".VoteWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" />
         <activity
             android:name=".StageWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" />
         <activity
             android:name=".MySetActivity"

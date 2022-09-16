@@ -68,7 +68,7 @@ class CmViewAdapter (val items : MutableList<CmData>,
 
                 val emailIntent = Intent(Intent.ACTION_SEND)
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("sookimy97@gmail.com"))
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "국민가수 응원하기 댓글신고")
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "미스터트롯2 응원하기 댓글신고")
                 emailIntent.putExtra(Intent.EXTRA_TEXT,  "\n--------------------------------\n가수 이름 : ${cmData.singerId} \n 신고 댓글 닉네임: ${cmData.username} \n 신고 댓글 내용: ${cmData.say}\n--------------------------------\n위의 내용을 지우지 말고 보내주세요. 관리자 확인 후 2~3일 이내로 조치됩니다.")
                 emailIntent.selector = selectorIntent
 
