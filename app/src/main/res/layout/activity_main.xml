@@ -28,7 +28,7 @@
             android:gravity="center"
             android:textSize="25sp"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#01a7f6"
+            android:background="#85F5B8"
             android:textColor="@color/white"
             />
 

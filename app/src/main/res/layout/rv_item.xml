@@ -27,7 +27,7 @@
                 android:id="@+id/best_comment_decorator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#2C08FE"
+                android:background="#8FFD7D"
                 android:visibility="visible"
                 android:gravity="center">
                 <ImageView
@@ -42,9 +42,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="응원댓글 1위"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginRight="20dp"/>
             </LinearLayout>
 
             <RelativeLayout
