@@ -45,7 +45,7 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:background="#2C08FE"
+                        android:background="#01af26"
                         android:text="최신\n영상"
                         android:textColor="@color/white"
                         android:textStyle="bold"
@@ -58,13 +58,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     app:cardCornerRadius="10dp">
+
                     <Button
 
                         android:id="@+id/infoBtn"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:background="#2C08FE"
+                        android:background="#01af26"
                         android:text="정보\n보기"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
@@ -78,7 +79,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#01a7f6"
+                android:background="#34ffdd"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -95,9 +96,9 @@
                         android:id="@+id/view_comment_count"
                         android:layout_width="wrap_content"
                         android:layout_height="50sp"
-                        android:background="@android:color/black"
+                        android:background="#01a7f6"
                         android:text="280개"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
@@ -124,7 +125,7 @@
                             android:layout_height="50sp"
                             android:layout_alignParentRight="true"
                             android:layout_marginLeft="43sp"
-                            android:background="@android:color/black"
+                            android:background="#01a7f6"
                             android:gravity="right"
                             app:lottie_autoPlay="false"
                             app:lottie_fileName="heart2.json"
@@ -134,7 +135,7 @@
                             android:layout_width="55dp"
                             android:layout_height="50sp"
                             android:layout_alignParentRight="true"
-                            android:background="@android:color/black"
+                            android:background="#01a7f6"
                             android:gravity="center"
                             android:text="좋아요"
                             android:textColor="@color/white" />
@@ -165,7 +166,7 @@
                         android:id="@+id/voteBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="50sp"
-                        android:background="@android:color/black"
+                        android:background="#01a7f6"
                         android:text="투표하기"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
@@ -184,7 +185,7 @@
                         android:id="@+id/shareBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="50sp"
-                        android:background="@android:color/black"
+                        android:background="#01a7f6"
                         android:text="공유"
                         android:textColor="@color/white"
                         android:textStyle="bold" />

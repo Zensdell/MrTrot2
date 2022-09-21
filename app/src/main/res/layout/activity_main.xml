@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:textStyle="bold"
-            android:text="응원하는 가수를 투표해주세요"
+            android:text="미스터트롯2 가수 응원하기"
             android:gravity="center"
             android:textSize="25sp"
             app:layout_constraintTop_toTopOf="parent"
