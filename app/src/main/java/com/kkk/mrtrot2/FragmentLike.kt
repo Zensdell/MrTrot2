@@ -38,7 +38,6 @@ class FragmentLike  : Fragment() {
 
         MobileAds.initialize(context) {}
         AdSettings.addTestDevice("796e3543-c38d-4b34-a088-f1b238d2cea3")
-
         mInterstitialAd = InterstitialAd(context)
         mInterstitialAd!!.adUnitId = "ca-app-pub-8246055051187544/2447787797"
         mInterstitialAd!!.loadAd(AdRequest.Builder().build())

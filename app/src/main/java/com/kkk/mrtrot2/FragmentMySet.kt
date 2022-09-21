@@ -69,7 +69,7 @@ class FragmentMySet : Fragment() {
         val useSite = view.findViewById<TextView>(R.id.useRule1)
         useSite?.setOnClickListener {
             Log.d(TAG, "어??여기서 찍어봐야될거아냐 그래야 알수있는거아냐!!!! ")
-            val uri = Uri.parse("https://sites.google.com/view/useful3/%ED%99%88")
+            val uri = Uri.parse("https://sites.google.com/view/mrtrot2use/")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }

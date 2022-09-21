@@ -56,7 +56,7 @@ class MySetActivity : AppCompatActivity() {
 
         val useSite = findViewById<TextView>(R.id.useRule)
         useSite.setOnClickListener {
-            val uri = Uri.parse("https://sites.google.com/view/useful3/%ED%99%88")
+            val uri = Uri.parse("https://sites.google.com/view/mrtrot2use/")
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }

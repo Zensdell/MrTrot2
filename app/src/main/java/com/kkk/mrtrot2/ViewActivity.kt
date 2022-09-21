@@ -75,7 +75,7 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
 
-//        AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
+        AdSettings.addTestDevice("ea105a44-6bca-4355-b6af-7a0c65a508cf")
         cmDataList.clear()
         val recyclerView = findViewById<RecyclerView>(R.id.cm_rv)
 
@@ -203,7 +203,7 @@ class ViewActivity : AppCompatActivity() {
                         .setTitle("댓글 이용 약관")
                         .setMessage("응원 댓글이 다음과 같을 경우 통보없이 댓글이 삭제되거나 응원댓글 작성에 제한을 받을 수 있습니다.\n\n *타인의 악의전인 비방이나 욕설이 있을 경우 \n *특정인의 명예훼손의 우려가 있는 경우 \n")
                         .setNeutralButton("이용약관 보기") {dialog, which ->
-                            val uri = Uri.parse("https://sites.google.com/view/useful3/%ED%99%88")
+                            val uri = Uri.parse("https://sites.google.com/view/mrtrot2use")
                             val intent = Intent(Intent.ACTION_VIEW, uri)
                             startActivity(intent)
                             cmEdit.clearFocus()
