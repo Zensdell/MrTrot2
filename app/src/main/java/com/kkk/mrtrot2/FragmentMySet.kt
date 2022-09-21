@@ -60,7 +60,7 @@ class FragmentMySet : Fragment() {
             selectorIntent.data = Uri.parse("mailto:")
 
             selectorIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("sookimy97@gmail.com"))
-            selectorIntent.putExtra(Intent.EXTRA_SUBJECT, "국민가수 응원하기 문의 메일")
+            selectorIntent.putExtra(Intent.EXTRA_SUBJECT, "미스터트롯2 응원하기 문의 메일")
             selectorIntent.putExtra(Intent.EXTRA_TEXT,  "문의하실 사항을 적어주세요")
 
             startActivity(Intent.createChooser(selectorIntent, "이메일 보내기"))

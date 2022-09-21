@@ -68,7 +68,7 @@
                 >
                 <Button
                     android:textSize="18sp"
-                    android:background="#2C08FE"
+                    android:background="#01af26"
                     android:id="@+id/change_button"
                     android:textColor="@color/white"
                     android:layout_width="70sp"
@@ -89,7 +89,7 @@
         android:layout_marginTop="10sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="국민가수 응원하기 안내사항"
+        android:text="미스터트롯2 응원하기 안내사항"
         android:textColor="@color/black"
         />
 

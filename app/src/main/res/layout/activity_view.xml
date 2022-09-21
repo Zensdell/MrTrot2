@@ -98,7 +98,7 @@
                         android:layout_height="50sp"
                         android:background="#01af26"
                         android:text="280개"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
@@ -125,7 +125,7 @@
                             android:layout_height="50sp"
                             android:layout_alignParentRight="true"
                             android:layout_marginLeft="43sp"
-                            android:background="#8FFD7D"
+                            android:background="#01af26"
                             android:gravity="right"
                             app:lottie_autoPlay="false"
                             app:lottie_fileName="heart2.json"
@@ -135,11 +135,11 @@
                             android:layout_width="55dp"
                             android:layout_height="50sp"
                             android:layout_alignParentRight="true"
-                            android:background="#8FFD7D"
+                            android:background="#01af26"
                             android:gravity="center"
                             android:textStyle="bold"
                             android:text="좋아요"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/white" />
 
                         <!--            <Button-->
                         <!--                android:id="@+id/likeBtn"-->
@@ -169,7 +169,7 @@
                         android:layout_height="50sp"
                         android:background="#01af26"
                         android:text="투표하기"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
@@ -186,9 +186,9 @@
                         android:id="@+id/shareBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="50sp"
-                        android:background="#8FFD7D"
+                        android:background="#01af26"
                         android:text="공유"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
