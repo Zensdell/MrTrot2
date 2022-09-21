@@ -129,7 +129,7 @@ class ViewActivity : AppCompatActivity() {
                 Log.d("애드몹리워드광고로드실패","애드몹 리워드 못 받음")
             }
         }
-//        rewardedAd.loadAd(AdRequest.Builder().build(), adLoadCallback)
+        rewardedAd.loadAd(AdRequest.Builder().build(), adLoadCallback)
 
         val cmButton = findViewById<ImageButton>(R.id.cmSave)
         cmButton?.setOnClickListener {         // 닉네임이 있는지 없는지 확인하고

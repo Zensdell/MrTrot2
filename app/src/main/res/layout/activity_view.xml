@@ -221,32 +221,32 @@
                     android:background="#01a7f6"
                     />
             </LinearLayout>
-            <LinearLayout
-                android:id="@+id/timeViewLayout"
-                android:paddingStart="5dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="다음 광고시청 가능 시간"/>
-                <TextView
-                    android:textColor="@color/black"
-                    android:id="@+id/timeMinuteTxt"
-                    android:paddingStart="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="00"/>
-                <TextView
-                    android:textColor="@color/black"
-                    android:id="@+id/timeSecondTxt"
-                    android:paddingStart="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":00"/>
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:id="@+id/timeViewLayout"-->
+<!--                android:paddingStart="5dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="다음 광고시청 가능 시간"/>-->
+<!--                <TextView-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:id="@+id/timeMinuteTxt"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="00"/>-->
+<!--                <TextView-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:id="@+id/timeSecondTxt"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text=": 00"/>-->
+<!--            </LinearLayout>-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
