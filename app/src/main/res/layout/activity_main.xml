@@ -46,9 +46,9 @@
                 android:elevation="1dp"
                 android:foregroundGravity="center"
                 app:tabGravity="fill"
-                app:tabIndicatorColor="#2C08FE"
+                app:tabIndicatorColor="#01af26"
                 app:tabMode="fixed"
-                app:tabSelectedTextColor="#2C08FE"
+                app:tabSelectedTextColor="#01af26"
                 app:tabTextColor="@color/black">
 
                 <com.google.android.material.tabs.TabItem
