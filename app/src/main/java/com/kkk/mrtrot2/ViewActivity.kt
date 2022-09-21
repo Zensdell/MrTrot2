@@ -116,7 +116,7 @@ class ViewActivity : AppCompatActivity() {
 
         MobileAds.initialize(this) {}
 
-//        rewardedAd = RewardedAd(this, "ca-app-pub-8246055051187544/3073413640")
+        rewardedAd = RewardedAd(this, "ca-app-pub-8246055051187544/4739495949")
 
         val adLoadCallback = object : RewardedAdLoadCallback() {
             override fun onRewardedAdLoaded() {
@@ -450,7 +450,7 @@ class ViewActivity : AppCompatActivity() {
 
             rewardedAd = RewardedAd(
                 this,
-                "ca-app-pub-8246055051187544/3073413640"
+                "ca-app-pub-8246055051187544/4739495949"
             )
 
             val adLoadCallback = object : RewardedAdLoadCallback() {

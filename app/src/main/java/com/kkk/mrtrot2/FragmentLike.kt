@@ -36,13 +36,13 @@ class FragmentLike  : Fragment() {
         // 여기가 메인액티비티에서 온크리에이트랑 비슷한 역할을하는함수야
         // 프래그먼트라 이름이 온크리에이트뷰임
 
-//        MobileAds.initialize(context) {}
-//        AdSettings.addTestDevice("796e3543-c38d-4b34-a088-f1b238d2cea3")
-//
-//        mInterstitialAd = InterstitialAd(context)
-//        mInterstitialAd!!.adUnitId = "ca-app-pub-8246055051187544/5730840886"
-//        mInterstitialAd!!.loadAd(AdRequest.Builder().build())
-//        Log.d("라이크전면광고","받아오나?")
+        MobileAds.initialize(context) {}
+        AdSettings.addTestDevice("796e3543-c38d-4b34-a088-f1b238d2cea3")
+
+        mInterstitialAd = InterstitialAd(context)
+        mInterstitialAd!!.adUnitId = "ca-app-pub-8246055051187544/2447787797"
+        mInterstitialAd!!.loadAd(AdRequest.Builder().build())
+        Log.d("라이크전면광고","받아오나?")
         val view: View = inflater.inflate(R.layout.fragment_like, container, false) as ViewGroup
         // view 를 inflate 로 받으면 view 안에 이제 context 가 들어가는것임 ! (원래는 Activity 안에 있던것을  Fragment 로 옮기면서 이렇게 변경됨)
 
