@@ -284,7 +284,8 @@ class ViewActivity : AppCompatActivity() {
 
         val shareButton = findViewById<Button>(R.id.shareBtn)
         shareButton.setOnClickListener { try {
-            val sendText = "감동의 무대를 선사한 미스터트롯2 함께 응원해요! 다운로드 - https://play.google.com/store/apps/details?id=com.kkk.tosinger"
+            val sendText = "감동의 무대를 선사한 미스터트롯2 함께 응원해요! 다운로드 - https://play.google.com/store/apps/details?id=com.kkk.mrtrot2"
+//            val sendText = "감동의 무대를 선사한 미스터트롯2 함께 응원해요! 다운로드 - https://play.google.com/store/apps/details?id=com.kkk.tosinger"
             val sendIntent = Intent()
             sendIntent.action = Intent.ACTION_SEND
             sendIntent.putExtra(Intent.EXTRA_TEXT, sendText)
