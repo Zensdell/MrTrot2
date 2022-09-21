@@ -115,7 +115,7 @@
             android:layout_marginTop="10sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. 응원 댓글에 사용할 닉네임을 정해주세요.\n\n2. 응원할 가수의 사진을 눌러주세요.    \n\n3. 댓글을 작성해 가수를 응원해주세요. \n\n4. 가수의 무대영상과 정보도 함께 확인하세요."
+            android:text="1. 방송에 맞춰 미스터트롯2 참가자 업데이트 예정입니다.\n\n2. 응원 댓글에 사용할 닉네임을 정해주세요.\n\n3. 응원할 가수의 사진을 눌러주세요.    \n\n4. 댓글을 작성해 가수를 응원해주세요. \n\n5. 가수의 무대영상과 정보도 함께 확인하세요."
             />
 
         <TextView
