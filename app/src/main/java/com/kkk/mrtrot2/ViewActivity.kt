@@ -183,7 +183,7 @@ class ViewActivity : AppCompatActivity() {
         setCommentRuleAgree()
 
 
-//        MediationTestSuite.launch(this,"ca-app-pub-8246055051187544~1096889511" )
+//        MediationTestSuite.launch(this,"ca-app-pub-8246055051187544~8203511508" )
         AdSettings.addTestDevice("796e3543-c38d-4b34-a088-f1b238d2cea3")
 
 

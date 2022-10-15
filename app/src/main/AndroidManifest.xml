@@ -10,7 +10,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="false"
         android:icon="@mipmap/ic_mrtrot2icon"
-        android:label="미스터트롯2\n응원하기"
+        android:label="미스터트롯2\n투표하기"
         android:roundIcon="@mipmap/ic_mrtrot2icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MrTrot2"
