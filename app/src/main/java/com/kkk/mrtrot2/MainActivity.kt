@@ -151,7 +151,7 @@ class MainActivity : FragmentActivity() {
                                     .setPositiveButton("확인") { dialog, which ->
 
                                         val myUri =
-                                            Uri.parse("market://details?id=com.kkk.tosinger") // 플레이스토어 주소 대입.
+                                            Uri.parse("market://details?id=com.kkk.mrtrot2") // 플레이스토어 주소 대입.
                                         val myIntent = Intent(Intent.ACTION_VIEW, myUri)
                                         startActivity(myIntent)
                                         isShowingAlertDialog = false

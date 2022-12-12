@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
@@ -22,32 +23,34 @@ class InfoWebView : AppCompatActivity() {
         infoWebView.webViewClient = WebViewClient()
 
         infoWebView.webChromeClient = MyWebClient()
-
         if (infoUrl != null) {
-            infoWebView.getSettings().setDomStorageEnabled(true);
-            infoWebView.getSettings().setJavaScriptEnabled(true);
-            infoWebView.loadUrl(infoUrl)
+            infoWebView.settings.domStorageEnabled = true
+            infoWebView.settings.javaScriptEnabled = true
+            infoWebView.settings.useWideViewPort = true
+            infoWebView.settings.supportZoom()
+            infoWebView.settings.supportMultipleWindows()
+            infoWebView.loadUrl(infoUrl);
         }
 
     }
-
-    override fun onPause(){
-        val vtWebView = findViewById<WebView>(R.id.voteWeb)
-        super.onPause()
-        if(vtWebView!=null) {
-            vtWebView.onPause()
-            vtWebView.pauseTimers()
-        }
-    }
-
-    override fun onResume(){
-        val vtWebView = findViewById<WebView>(R.id.voteWeb)
-        super.onResume()
-        if(vtWebView!=null){
-            vtWebView.onResume()
-            vtWebView.resumeTimers()
-        }
-    }
+//
+//    override fun onPause(){
+//        val vtWebView = findViewById<WebView>(R.id.voteWeb)
+//        super.onPause()
+//        if(vtWebView!=null) {
+//            vtWebView.onPause()
+//            vtWebView.pauseTimers()
+//        }
+//    }
+//
+//    override fun onResume(){
+//        val vtWebView = findViewById<WebView>(R.id.voteWeb)
+//        super.onResume()
+//        if(vtWebView!=null){
+//            vtWebView.onResume()
+//            vtWebView.resumeTimers()
+//        }
+//    }
 
     inner class MyWebClient : WebChromeClient() {
 

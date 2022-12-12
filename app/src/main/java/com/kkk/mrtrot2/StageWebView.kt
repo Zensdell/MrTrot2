@@ -21,36 +21,36 @@ class StageWebView : AppCompatActivity() {
 
         val stageWebView = findViewById<WebView>(R.id.stage_webview)
         stageWebView.webViewClient = WebViewClient()
-
+        stageWebView.webChromeClient = MyWebClient()
         if (stageUrl != null) {
-            stageWebView.getSettings().setDomStorageEnabled(true)
-            stageWebView.getSettings().setJavaScriptEnabled(true)
+            stageWebView.settings.domStorageEnabled = true
+            stageWebView.settings.javaScriptEnabled = true
+            stageWebView.settings.useWideViewPort = true
+            stageWebView.settings.supportZoom()
+            stageWebView.settings.supportMultipleWindows()
             stageWebView.loadUrl(stageUrl)
         }
 
-        stageWebView.webChromeClient = MyWebClient()
-
-
     }
 
-
-    override fun onPause() {
-        val stageWebView = findViewById<WebView>(R.id.stage_webview)
-        super.onPause()
-        if (stageWebView != null) {
-            stageWebView.onPause()
-            stageWebView.pauseTimers()
-        }
-    }
-
-    override fun onResume() {
-        val stageWebView = findViewById<WebView>(R.id.stage_webview)
-        super.onResume()
-        if (stageWebView != null) {
-            stageWebView.onResume()
-            stageWebView.resumeTimers()
-        }
-    }
+//
+//    override fun onPause() {
+//        val stageWebView = findViewById<WebView>(R.id.stage_webview)
+//        super.onPause()
+//        if (stageWebView != null) {
+//            stageWebView.onPause()
+//            stageWebView.pauseTimers()
+//        }
+//    }
+//
+//    override fun onResume() {
+//        val stageWebView = findViewById<WebView>(R.id.stage_webview)
+//        super.onResume()
+//        if (stageWebView != null) {
+//            stageWebView.onResume()
+//            stageWebView.resumeTimers()
+//        }
+//    }
 
     inner class MyWebClient : WebChromeClient() {
 
