@@ -39,8 +39,7 @@
                 <TextView
                     android:id="@+id/rankingText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="응원댓글 1위"
                     android:textColor="@color/black"
@@ -89,8 +88,7 @@
                     android:src="@drawable/goldmedal1"/>
                 <TextView
                     android:id="@+id/manyComment"
-
-
+                    android:layout_marginBottom="1dp"
                     android:lineSpacingMultiplier="0.7"
                     android:textColor="@color/black"
                     android:gravity="center"

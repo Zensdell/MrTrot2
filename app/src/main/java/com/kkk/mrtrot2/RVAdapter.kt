@@ -98,15 +98,15 @@ class RVAdapter(private val context:Context) : RecyclerView.Adapter<RVAdapter.Vi
 
             if(position==0) {
                 singerCrown.setImageResource(R.drawable.goldcrown)
-                singerRanking.text="응원댓글 1위"
+                singerRanking.text="응원댓글 1위    "
                 bestCommentDecorator.visibility = View.VISIBLE
             } else if(position==1) {
                 singerCrown.setImageResource(R.drawable.silvercrown)
-                singerRanking.text="응원댓글 2위"
+                singerRanking.text="응원댓글 2위    "
                 bestCommentDecorator.visibility = View.VISIBLE
             } else if(position==2) {
                 singerCrown.setImageResource(R.drawable.bronzecrown)
-                singerRanking.text="응원댓글 3위"
+                singerRanking.text="응원댓글 3위    "
                 bestCommentDecorator.visibility = View.VISIBLE
             } else if(position==3) {
                 singerCrown.visibility = View.GONE
