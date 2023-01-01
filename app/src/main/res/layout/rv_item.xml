@@ -26,7 +26,7 @@
             <LinearLayout
                 android:id="@+id/best_comment_decorator"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30sp"
                 android:background="#8FFD7D"
                 android:visibility="visible"
                 android:gravity="center">
@@ -77,17 +77,20 @@
                     android:textSize="18sp" />
 
    <RelativeLayout
+       android:id="@+id/best_medal"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:gravity="right"
        >
                 <ImageView
-                    android:layout_width="33sp"
-                    android:layout_height="33sp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_width="29sp"
+                    android:layout_height="29sp"
                     android:src="@drawable/goldmedal1"/>
                 <TextView
-                    android:layout_marginLeft="1sp"
-                    android:layout_marginTop="1sp"
+                    android:id="@+id/manyComment"
+
+
                     android:lineSpacingMultiplier="0.7"
                     android:textColor="@color/black"
                     android:gravity="center"

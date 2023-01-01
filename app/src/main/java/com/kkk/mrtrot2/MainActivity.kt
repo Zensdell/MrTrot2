@@ -227,6 +227,12 @@ class MainActivity : FragmentActivity() {
                 }
 
                 datas2.sortByDescending { it.commentCount }
+                datas.add(0,datas2[8])
+                datas.add(0,datas2[7])
+                datas.add(0,datas2[6])
+                datas.add(0,datas2[5])
+                datas.add(0,datas2[4])
+                datas.add(0,datas2[3])
                 datas.add(0,datas2[2])
                 datas.add(0,datas2[1])
                 datas.add(0,datas2[0])

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -46,13 +47,14 @@ class RVLikeAdapter(private val context:Context) : RecyclerView.Adapter<RVLikeAd
         private val singerCrown :ImageView = itemView.findViewById(R.id.crown)
         private val singerRanking: TextView = itemView.findViewById(R.id.rankingText)
         private val bestCommentDecorator: LinearLayout = itemView.findViewById(R.id.best_comment_decorator)
+        private val bestMedal : RelativeLayout = itemView.findViewById(R.id.best_medal)
 
         fun bind(item : ProfileData,position: Int){
             singername.text = item.name
             Glide.with(itemView).load(item.img).into(singerphoto)
             commentCount.text = item.commentCount.toString()
 
-
+            bestMedal.visibility = View.GONE
             singerCrown.setImageBitmap(null)
             singerRanking.text=null
             bestCommentDecorator.visibility = View.GONE
