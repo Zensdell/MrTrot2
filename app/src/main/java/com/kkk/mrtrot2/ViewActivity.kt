@@ -39,7 +39,6 @@ import kotlin.collections.ArrayList
 import android.widget.Toast
 
 import com.facebook.ads.AdSettings
-import com.google.android.ads.mediationtestsuite.MediationTestSuite
 
 import com.google.android.gms.ads.*
 import kotlinx.android.synthetic.main.activity_view.*
@@ -67,7 +66,8 @@ class ViewActivity : AppCompatActivity() {
     private lateinit var intentStageUrl: String
     private var intentCommentCount: Long = 0
 
-    private var blockedCommentList: ArrayList<String>? = null
+    private var clearList: ArrayList<String>? = null
+    private var blockedList: ArrayList<String>? = null
     private lateinit var cmEdit:EditText
     private lateinit var cmEditText: String
 
@@ -79,11 +79,18 @@ class ViewActivity : AppCompatActivity() {
         cmDataList.clear()
         val recyclerView = findViewById<RecyclerView>(R.id.cm_rv)
 
-        blockedCommentList = getStringArrayPref(this, "block")
-        if(blockedCommentList == null) {
-            blockedCommentList = ArrayList<String>()
+//        clearList = getStringArrayPref(this,"clear") 해제 복귀 위한 clearList
+//        if(clearList == null) {
+//            clearList == ArrayList<String>()
+//        }
+        blockedList = getStringArrayPref(this, "block")
+        if(blockedList == null) {
+            blockedList = ArrayList<String>()
         }
-        cmViewAdapter = CmViewAdapter(cmDataList, blockedCommentList!!, this) //여기가 cmViewAdapter에 값을 주는 부분
+        cmViewAdapter = CmViewAdapter(cmDataList,
+                                      blockedList!!,
+//                                      clearList!!,
+                                      this) //여기가 cmViewAdapter에 값을 주는 부분
         recyclerView.adapter = cmViewAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 

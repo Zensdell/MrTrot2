@@ -19,6 +19,7 @@ import org.json.JSONArray
 // 어댑터를 생성해줄때 뷰 액티비티에서 만들어진 기존의 차단된 댓글아이디 리스트를 넣어준다. --> blockedList
 class CmViewAdapter (val items : MutableList<CmData>,
                      val blockedList : ArrayList<String>,
+//                     val clearList : ArrayList<String>,
                      val context: Context) : RecyclerView.Adapter<CmViewAdapter.ViewHolder>(){
 
 
@@ -77,26 +78,30 @@ class CmViewAdapter (val items : MutableList<CmData>,
             }
 
             val block:TextView = itemView.findViewById(R.id.blockButton)
-            block.setOnClickListener {
-
-                AlertDialog.Builder(itemView.context)
-                    .setTitle("사용자 차단하기")
-                    .setMessage("해당 사용자를 차단하시겠습니까?")
-                    .setPositiveButton("확인") { dialog, which ->
-
-                        // 차단해서 차단된 댓글 아이디 저장하는 부분
-                        cmwrite.text="차단된 사용자의 댓글입니다."
-                        cmNickname!!.visibility = View.GONE
-                        blockedList.add(cmData.username)
-                        // 아래의 함수에서 리스트를 셰어드 프리퍼런스에 저장하는 역할을 함
-                        setStringArrayPref(context, "block", blockedList)
-                        notifyDataSetChanged()
-
-                    }
-                    .setNegativeButton("취소") { dialog, which -> dialog.dismiss() }
-                    .show()
-
-            }
+             block.text = "차단"
+             if(blockedList.contains(cmData.username)) {
+                 block.text = "해제"
+             }
+//            block.setOnClickListener {
+//
+//                AlertDialog.Builder(itemView.context)
+//                    .setTitle("사용자 차단하기")
+//                    .setMessage("해당 사용자를 차단하시겠습니까?")
+//                    .setPositiveButton("확인") { dialog, which ->
+//
+//                        // 차단해서 차단된 댓글 아이디 저장하는 부분
+//                        cmwrite.text="차단된 사용자의 댓글입니다."
+//                        cmNickname!!.visibility = View.GONE
+//                        blockedList.add(cmData.username)
+//                        // 아래의 함수에서 리스트를 셰어드 프리퍼런스에 저장하는 역할을 함
+//                        setStringArrayPref(context, "block", blockedList)
+//                        notifyDataSetChanged()
+//
+//                    }
+//                    .setNegativeButton("취소") { dialog, which -> dialog.dismiss() }
+//                    .show()
+//
+//            }
 
             block.setOnClickListener {
                 if(blockedList.contains(cmData.username)) {
@@ -107,6 +112,8 @@ class CmViewAdapter (val items : MutableList<CmData>,
                             cmwrite!!.text = cmData.say
                             cmNickname!!.visibility = View.VISIBLE
                             blockedList.remove(cmData.username)
+                            setStringArrayPref(context, "block", blockedList)
+                            block.text = "차단"
                             notifyDataSetChanged()
                         }
                         .setNegativeButton("취소") { dialog, which -> dialog.dismiss() }
@@ -123,6 +130,7 @@ class CmViewAdapter (val items : MutableList<CmData>,
                             blockedList.add(cmData.username)
                             // 아래의 함수에서 리스트를 셰어드 프리퍼런스에 저장하는 역할을 함
                             setStringArrayPref(context, "block", blockedList)
+                            block.text = "해제"
                             notifyDataSetChanged()
 
                         }
