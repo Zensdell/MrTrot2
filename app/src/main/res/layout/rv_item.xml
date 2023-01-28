@@ -57,6 +57,30 @@
                     android:src="@drawable/imphoto"
                     android:scaleType="centerCrop"
                     />
+                <RelativeLayout
+                    android:id="@+id/best_medal"
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:gravity="right|bottom"
+                    >
+                    <ImageView
+                        android:layout_marginBottom="5sp"
+                        android:layout_width="38sp"
+                        android:layout_height="38sp"
+                        android:src="@drawable/goldmedal1"/>
+                    <TextView
+                        android:id="@+id/manyComment"
+                        android:layout_marginBottom="1dp"
+                        android:lineSpacingMultiplier="0.85"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_width="38sp"
+                        android:layout_height="38sp"
+                        android:text="1만\n달성"
+                        android:textStyle="bold"
+                        />
+                </RelativeLayout>
 
 
 
@@ -76,30 +100,7 @@
                     android:text="임영웅"
                     android:textSize="18sp" />
 
-   <RelativeLayout
-       android:id="@+id/best_medal"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:gravity="right"
-       >
-                <ImageView
-                    android:layout_marginBottom="5sp"
-                    android:layout_width="29sp"
-                    android:layout_height="29sp"
-                    android:src="@drawable/goldmedal1"/>
-                <TextView
-                    android:id="@+id/manyComment"
-                    android:layout_marginBottom="1dp"
-                    android:lineSpacingMultiplier="0.7"
-                    android:textColor="@color/black"
-                    android:gravity="center"
-                    android:textSize="9sp"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:text="1 만\n달성"
-                    android:textStyle="bold"
-                    />
-   </RelativeLayout>
+
 </RelativeLayout>
 
             <LinearLayout

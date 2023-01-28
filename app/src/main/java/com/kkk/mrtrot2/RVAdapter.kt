@@ -60,31 +60,31 @@ class RVAdapter(private val context:Context) : RecyclerView.Adapter<RVAdapter.Vi
 
             var cc = item.commentCount;
             if(cc in 10000..19999) {
-                manyComment.text = "1 만\n달성"
+                manyComment.text = "1만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 20000..29999) {
-                manyComment.text = "2 만\n달성"
+                manyComment.text = "2만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 30000..39999) {
-                manyComment.text = "3 만\n달성"
+                manyComment.text = "3만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 40000..49999) {
-                manyComment.text = "4 만\n달성"
+                manyComment.text = "4만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 50000..59999) {
-                manyComment.text = "5 만\n달성"
+                manyComment.text = "5만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 60000..69999) {
-                manyComment.text = "6 만\n달성"
+                manyComment.text = "6만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 70000..79999) {
-                manyComment.text = "7 만\n달성"
+                manyComment.text = "7만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 80000..89999) {
-                manyComment.text = "8 만\n달성"
+                manyComment.text = "8만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 90000..99999) {
-                manyComment.text = "9 만\n달성"
+                manyComment.text = "9만\n달성"
                 bestMedal.visibility = View.VISIBLE
             } else if (cc in 100000..199999) {
                 manyComment.text = "10만\n달성"
